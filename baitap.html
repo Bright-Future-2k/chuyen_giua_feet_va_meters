@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feet-meters</title>
+</head>
+<h1> Chuyển đổi feet - meters</h1>
+<input type="text" id="num">
+ Từ: <select id="to">
+    <option value="1">meters</option>
+    <option value="0.305">feet</option>
+    </select>
+Sang: <select id="from">
+    <option value="1">meters</option>
+    <option value="0,305">feet</option>
+    </select>
+<button type="button" onclick="chuyenSang()">Submit</button>
+<script>
+    function chuyenSang() {
+        let gTri = Number(document.getElementById("num").value);
+        let from = Number(document.getElementById("from").value);
+        let to = Number(document.getElementById("to").value);
+        let result = (gTri * to) / from;
+        document.write(result);
+    }
+</script>
+</body>
+</html>
